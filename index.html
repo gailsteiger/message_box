@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Box</title>
+    <!-- PatternFly Styles -->
+    <!-- Note: No other CSS files are needed regardless of what other JS packages located in patternfly/components that you decide to pull in -->
+    <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly.min.css">
+    <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly-additions.min.css">
+    <style>
+        .message-container {
+            width: 250px;
+            height: 300px;
+            /*display: flex;*/
+            border: 1px solid gray;
+            margin: 50px auto;
+        }
+
+        .message-box {
+            width: inherit;
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .message-box .pficon, .message-box .message {
+            /*flex-grow: 1;*/
+            /*flex-shrink: 1;*/
+            flex-basis: 30px;
+            text-align: center;
+        }
+
+        .message-box .pficon {
+            /*align-self: flex-end;*/
+            font-size: 22px;
+        }
+
+        .message {
+            color: #363636;
+            font-size: 12px;
+        }
+
+        .alert-transparent {
+            border-color: transparent;
+            background-color: transparent;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="message-container">
+    <!--<div>-->
+        <div class="message-box">
+            <div class="pficon pficon-info"></div>
+            <div class="message">A message</div>
+        </div>
+    <!--</div>-->
+    <div class="alert alert-transparent">
+        <div class="pficon pficon-info"></div>
+        <div>some message</div>
+    </div>
+</div>
+<!-- jQuery -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
